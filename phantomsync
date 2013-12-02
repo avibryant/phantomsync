@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Enter your Amazon.com username: " username
+read -s -p "Enter your Amazon.com password: " password
+rm -rf /tmp/phantomsync
+phantomjs --local-storage-path /tmp/phantomsync phantomsync.js $username $password > sync.json
